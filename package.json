@@ -1,0 +1,21 @@
+{
+  "name": "screenplay_cc",
+  "version": "1.0.0",
+  "description": "JS scripts to add functionality to sales page",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyaaan/screenplay_cc.git"
+  },
+  "author": "John Yamashiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jyaaan/screenplay_cc/issues"
+  },
+  "homepage": "https://github.com/jyaaan/screenplay_cc#readme"
+}
