@@ -7,7 +7,8 @@ const inboundURL = window.location.href;
 const $as = document.querySelectorAll('a');
 
 console.log('inbound URL: ' + inboundURL);
-console.log('a elements: ' + $as);
+console.log('first a element: ' + $as[0]);
+console.log('a element count: ', $a.length);
 $as.forEach(function(a) {
-  console.log(a);
+  console.log('eggs');
 });
