@@ -4,17 +4,21 @@ const targetURLs = [
 ]
 
 const inboundURL = window.location.href;
-const $mkButtons = document.querySelectorAll(".mk-button");
+// const $mkButtons = document.querySelectorAll(".mk-button");
 
-console.log('first mk: ' + $mkButtons[0]);
-console.log('mkButton count: ' + $mkButtons.length);
+// console.log('first mk: ' + $mkButtons[0]);
+// console.log('mkButton count: ' + $mkButtons.length);
 
 // const $as = $mkButtons.getElementsByTagName("a");
 const $as = document.getElementsByTagName('a');
 
 console.log('inbound URL: ' + inboundURL);
-console.log('first a element: ' + $as[0]);
+console.log('eleventh a element: ' + $as[10]);
 console.log('a element count: ', $as.length);
-$as.forEach(function(a) {
-  console.log(a);
+// $as.forEach(function(a) {
+//   console.log(a);
+// });
+
+Object.keys($as).forEach(function (key){
+  console.log($as[key]);
 });
