@@ -9,7 +9,8 @@ const $mkButtons = document.querySelectorAll(".mk-button");
 console.log('first mk: ' + $mkButtons[0]);
 console.log('mkButton count: ' + $mkButtons.length);
 
-const $as = $mkButtons.getElementsByTagName("a");
+// const $as = $mkButtons.getElementsByTagName("a");
+const $as = document.getElementsByTagName('a');
 
 console.log('inbound URL: ' + inboundURL);
 console.log('first a element: ' + $as[0]);
