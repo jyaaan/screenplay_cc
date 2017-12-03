@@ -6,7 +6,8 @@ const targetURLs = [
 const inboundURL = window.location.href;
 const $a = document.querySelectorAll('a');
 
-$a.map(a => {
+console.log('inbound URL: ' + inboundURL);
+
+$a.forEach(a => {
   console.log(a.href);
-  console.log('inbound URL: ' + inboundURL);
 });
