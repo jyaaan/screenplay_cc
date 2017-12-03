@@ -7,7 +7,7 @@ const inboundURL = window.location.href;
 const $a = document.querySelectorAll('a');
 
 console.log('inbound URL: ' + inboundURL);
-
-$a.forEach(a => {
-  console.log(a.href);
-});
+console.log('a elements: ' + $a);
+// $a.forEach(a => {
+//   console.log(a.href);
+// });
