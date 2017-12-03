@@ -4,8 +4,12 @@ const targetURLs = [
 ]
 
 const inboundURL = window.location.href;
-// const $as = document.querySelectorAll("a[href]");
-const $as = document.getElementsByTagName("a");
+const $mkButtons = document.querySelectorAll(".mk-button");
+
+console.log('first mk: ' + $mkButtons[0]);
+console.log('mkButton count: ' + $mkButtons.length);
+
+const $as = $mkButtons.getElementsByTagName("a");
 
 console.log('inbound URL: ' + inboundURL);
 console.log('first a element: ' + $as[0]);
