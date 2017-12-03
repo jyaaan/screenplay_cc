@@ -4,10 +4,10 @@ const targetURLs = [
 ]
 
 const inboundURL = window.location.href;
-const $a = document.querySelectorAll('a');
+const $as = document.querySelectorAll('a');
 
 console.log('inbound URL: ' + inboundURL);
-console.log('a elements: ' + $a);
-// $a.forEach(a => {
-//   console.log(a.href);
-// });
+console.log('a elements: ' + $as);
+$as.forEach(function(a) {
+  console.log(a);
+});
