@@ -4,11 +4,12 @@ const targetURLs = [
 ]
 
 const inboundURL = window.location.href;
-const $as = document.querySelectorAll("a[href]");
+// const $as = document.querySelectorAll("a[href]");
+const $as = document.getElementsByTagName("a").getAttribute("href");
 
 console.log('inbound URL: ' + inboundURL);
 console.log('first a element: ' + $as[0]);
 console.log('a element count: ', $as.length);
 $as.forEach(function(a) {
-  console.log('eggs');
+  console.log(a);
 });
