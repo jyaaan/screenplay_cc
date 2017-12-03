@@ -5,7 +5,7 @@ const targetURLs = [
 
 const inboundURL = window.location.href;
 // const $as = document.querySelectorAll("a[href]");
-const $as = document.getElementsByTagName("a").getAttribute("href");
+const $as = document.getElementsByTagName("a");
 
 console.log('inbound URL: ' + inboundURL);
 console.log('first a element: ' + $as[0]);
