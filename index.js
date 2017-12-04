@@ -4,21 +4,27 @@ const targetURLs = [
 ]
 
 const inboundURL = window.location.href;
-// const $mkButtons = document.querySelectorAll(".mk-button");
+const referencePos = inboundURL.indexOf('ref=') + 4;
+const referenceEnd = inboundURL.indexOf('&', referencePos) > 0 ? inboundURL.indexOf('&', referencePos) : inboundURL.length;
+const referenceID = referencePos > 4 ? inboundURL.substring(referencePos, referenceEnd) : false;
 
-// console.log('first mk: ' + $mkButtons[0]);
-// console.log('mkButton count: ' + $mkButtons.length);
-
-// const $as = $mkButtons.getElementsByTagName("a");
 const $as = document.getElementsByTagName('a');
 
-console.log('inbound URL: ' + inboundURL);
-console.log('eleventh a element: ' + $as[10]);
-console.log('a element count: ', $as.length);
-// $as.forEach(function(a) {
-//   console.log(a);
-// });
+const verifyURL = (link, validURLs) => {
+  var verified = false;
+  validURLs.forEach(url => {
+    if (link == url) {
+      verified = true;
+    }
+  });
+  return verified;
+}
 
-Object.keys($as).forEach(function (key){
-  console.log($as[key]);
-});
+if (referenceID) {
+  Object.keys($as).map(key => {
+    const current = $as[key].href;
+    if (verifyURL(current, targetURLs)) {
+      $as[key].href = current + (current.indexOf('?') > 0 ? '&' : '?') + 'ref=' + referenceID;
+    }
+  });
+}
