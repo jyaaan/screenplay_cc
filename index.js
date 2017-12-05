@@ -25,6 +25,9 @@ const isolateReferenceID = referenceID => {
   if (referenceID.indexOf('%') > 0) {
     referenceID = referenceID.substring(0, referenceID.indexOf('%'));
   }
+  if (referenceID.indexOf('&') > 0) {
+    referenceID = referenceID.substring(0, referenceID.indexOf('&'));
+  }
   return referenceID;
 }
 
