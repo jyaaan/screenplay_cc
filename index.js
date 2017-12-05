@@ -20,8 +20,16 @@ const verifyURL = (link, validURLs) => {
   return verified;
 }
 
-if (referenceID) {
+const isolateReferenceID = referenceID => {
   referenceID.replace('/', '');
+  if (referenceID.indexOf('%') > 0) {
+    referenceID = referenceID.substring(0, referenceID.indexOf('%'));
+  }
+  return referenceID;
+}
+
+if (referenceID) {
+  referenceID = isolateReferenceID(referenceID);
   Object.keys($as).map(key => {
     const current = $as[key].href;
     if (verifyURL(current, targetURLs)) {
